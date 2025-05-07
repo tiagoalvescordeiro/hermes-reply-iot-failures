@@ -66,17 +66,6 @@ graph TD
 - A simulação é feita com **geradores de dados em Python**, que imitam o comportamento esperado de sensores ESP32 conectados a motores, esteiras e máquinas industriais.
 - No futuro, será possível integrar diretamente com sensores físicos via comunicação MQTT ou HTTP, utilizando microcontroladores como o ESP32.
 
-## 🛠️ Plano de Desenvolvimento
-
-| Etapa                            | Responsável            | Status     | Observações                     |
-|----------------------------------|------------------------|------------|----------------------------------|
-| Levantamento de requisitos       | Todo o grupo           | ✅ Concluído |                                  |
-| Simulação de sensores            | [Fulano]               | 🔄 Em andamento | Script em Python com dados sintéticos |
-| Criação da API Flask             | [Beltrano]             | 🔲 Planejado | Recebimento e validação de dados |
-| Configuração AWS RDS             | [Sicrana]              | 🔲 Planejado | PostgreSQL/MySQL                 |
-| Treinamento do modelo de IA      | [Fulano]               | 🔲 Planejado | Modelos de regressão e classificação |
-| Criação dos Dashboards           | [Sicrana]              | 🔲 Planejado | Integração com Grafana ou Power BI |
-| Documentação e GitHub            | Todo o grupo           | 🔄 Em andamento | README, issues, cronograma       |
 
 
 ## 📂 Organização do Repositório
