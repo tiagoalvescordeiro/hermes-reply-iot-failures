@@ -1,84 +1,73 @@
+# Welcome to your Lovable project
 
-# 🏭 Sistema de Prevenção de Falhas em Linhas de Produção Industrial
+## Project info
 
-## 📌 Visão Geral
+**URL**: https://lovable.dev/projects/b4862cf5-1ff8-4ae6-a219-42d22bed161b
 
-Este projeto foi desenvolvido como parte do desafio proposto pela empresa **Hermes Reply**, com o objetivo de aplicar Inteligência Artificial e IoT na **prevenção de falhas em linhas de produção industriais**. O sistema simula a coleta de dados em tempo real via sensores (ESP32), armazena essas informações em um banco de dados na nuvem e utiliza algoritmos de Machine Learning para detectar padrões que indiquem possíveis falhas, gerando **alertas, dashboards e relatórios automatizados** para a equipe técnica.
+## How can I edit this code?
 
-## 🎯 Problema
+There are several ways of editing your application.
 
-Empresas industriais sofrem com **interrupções inesperadas** nas linhas de produção, causadas por falhas mecânicas e elétricas em seus equipamentos. Essas paradas geram:
+**Use Lovable**
 
-- Perdas financeiras;
-- Atrasos logísticos;
-- Aumento do custo de manutenção corretiva;
-- Redução da produtividade e da eficiência operacional.
+Simply visit the [Lovable Project](https://lovable.dev/projects/b4862cf5-1ff8-4ae6-a219-42d22bed161b) and start prompting.
 
-**A ausência de uma abordagem preditiva** dificulta a detecção precoce dessas falhas, limitando a atuação apenas após o problema ocorrer.
+Changes made via Lovable will be committed automatically to this repo.
 
-## 💡 Solução Proposta
+**Use your preferred IDE**
 
-Criar um **sistema inteligente de monitoramento preditivo**, baseado em:
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-- **Coleta de dados via sensores IoT (ESP32)**;
-- Armazenamento em **banco de dados na nuvem (AWS RDS)**;
-- Processamento com **modelos de Machine Learning (Scikit-learn, TensorFlow)**;
-- Visualização via **dashboards (Grafana ou Power BI)**;
-- Geração de **alertas automáticos** para manutenção preventiva.
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-## 🧰 Tecnologias Utilizadas
+Follow these steps:
 
-| Tecnologia        | Função                                                             |
-|------------------|--------------------------------------------------------------------|
-| **Python 3.x**    | Lógica de backend e scripts de análise preditiva                  |
-| **Flask**         | API REST para recebimento dos dados dos sensores                  |
-| **ESP32 (simulado)** | Simulação da coleta de dados via sensores IoT                    |
-| **Pandas / NumPy**| Processamento e análise dos dados coletados                       |
-| **Scikit-learn**  | Modelagem preditiva com algoritmos de ML                          |
-| **TensorFlow**    | Suporte a modelos mais complexos, se necessário                   |
-| **AWS RDS**       | Banco de dados relacional para armazenamento dos dados            |
-| **AWS EC2**       | Processamento dos dados e execução dos modelos de IA              |
-| **Grafana / Power BI** | Criação dos dashboards de visualização em tempo real         |
-| **Draw.io**       | Ferramenta usada para criação do diagrama da arquitetura          |
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-## 🧠 Arquitetura da Solução
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-```
-graph TD
-    A[ESP32 - Sensores] --> B[API Flask (Python)]
-    B --> C[Banco de Dados (AWS RDS)]
-    C --> D[Processamento de IA (AWS EC2)]
-    D --> E[Dashboards (Grafana / Power BI)]
-    D --> F[Alertas e Relatórios Automáticos]
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
 ```
 
-## 🔁 Pipeline de Dados
+**Edit a file directly in GitHub**
 
-1. **Simulação de sensores IoT (ESP32):** geração periódica de dados simulados (temperatura, vibração, rotação, etc.).
-2. **API Flask:** recebe e valida os dados via requisições HTTP.
-3. **Banco de dados AWS RDS:** armazena os dados com histórico e metadata.
-4. **Processamento em EC2 (AWS):** scripts em Python acessam os dados e aplicam modelos de Machine Learning para detectar padrões.
-5. **Dashboards e Relatórios:** interface de visualização dos dados, com alertas e relatórios enviados periodicamente.
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-## 🔎 Estratégia de Coleta de Dados
+**Use GitHub Codespaces**
 
-- Nesta fase, os dados serão **simulados** com base em cenários industriais reais.
-- A simulação é feita com **geradores de dados em Python**, que imitam o comportamento esperado de sensores ESP32 conectados a motores, esteiras e máquinas industriais.
-- No futuro, será possível integrar diretamente com sensores físicos via comunicação MQTT ou HTTP, utilizando microcontroladores como o ESP32.
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
+## What technologies are used for this project?
 
+This project is built with:
 
-## 📂 Organização do Repositório
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-```
-📁 /src
-├── /api_flask/
-├── /simulador/
-├── /modelos/
-├── /dashboards/
-📁 /docs
-├── arquitetura.drawio
-├── README.md
-└── plano_de_desenvolvimento.md
-```
+## How can I deploy this project?
 
+Simply open [Lovable](https://lovable.dev/projects/b4862cf5-1ff8-4ae6-a219-42d22bed161b) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
