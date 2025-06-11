@@ -183,3 +183,4 @@ O sistema utiliza as seguintes regras para gerar alertas e predições:
 - Otavio Custodio de Oliveira - RM565606
 - Tiago Alves Cordeiro - RM561791
 - Thiago Henrique Pereira de Almeida Santos - RM563327
+- Leandro Arthur Marinho Ferreira - RM565240
