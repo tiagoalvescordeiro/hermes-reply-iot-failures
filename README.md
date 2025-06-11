@@ -62,7 +62,7 @@ O sistema possui a seguinte arquitetura de dados:
 3.  **Banco de Dados (Supabase)**: Um banco de dados PostgreSQL gerenciado pelo Supabase armazena os dados das máquinas e as leituras históricas dos sensores.
 4.  **Frontend (React)**: Um dashboard construído em React com a biblioteca de componentes `shadcn/ui` busca os dados do Supabase em tempo real e os exibe em uma interface intuitiva, com cartões de status, alertas e gráficos.
 
-```mermaid
+```
 graph TD
     A[Simulador de Sensores] -- Dados JSON via HTTP --> B[API Flask (Python)];
     B -- Armazena Leituras --> C[Banco de Dados Supabase];
@@ -83,7 +83,7 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
 ### 2. Configuração do Banco de Dados (Supabase)
 
 1.  **Crie um novo projeto no Supabase** e guarde a **Project URL** e a **anon/public key** da API.
-2.  No editor SQL do Supabase, execute o script de schema para criar as tabelas necessárias. O schema pode ser encontrado em `scripts/database-schema.sql` ou `supabase/migrations/20250610213345-17113cf8-abe6-4158-ac5c-9e90ecddc917.sql`.
+2.  No editor SQL do Supabase, execute o script de schema para criar as tabelas necessárias. O schema pode ser encontrado em `scripts/database-schema.sql`
 
 ### 3. Configuração do Backend (API Flask)
 
