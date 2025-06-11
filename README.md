@@ -10,6 +10,7 @@ Este projeto é um sistema inteligente de monitoramento industrial que utiliza c
 - [Visão Geral do Projeto](#-visão-geral-do-projeto)
 - [O Problema](#-o-problema)
 - [A Solução](#-a-solução)
+- [Imagens da simulação do circuito](#-imagens-da-simulação-do-circuito)
 - [Principais Funcionalidades](#-principais-funcionalidades)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [Arquitetura da Solução](#-arquitetura-da-solução)
@@ -36,6 +37,12 @@ Interrupções inesperadas em linhas de produção, causadas por falhas de equip
 
 A solução proposta é um **sistema inteligente de monitoramento preditivo** que combina hardware simulado e uma stack de software moderna. O sistema coleta e analisa dados de sensores para identificar anomalias e prever falhas antes que elas aconteçam, permitindo uma manutenção proativa. A plataforma é composta por um dashboard em React que exibe dados em tempo real, um backend em Flask (Python) para processamento e uma base de dados no Supabase para armazenamento.
 
+## 🏭 Imagens da simulação do circuito
+
+<img src="https://github.com/tiagoalvescordeiro/hermes-reply-iot-failures/blob/main/hardware/fase3-2.PNG" width="200" height="200" alt="IMG1">
+<img src="https://github.com/tiagoalvescordeiro/hermes-reply-iot-failures/blob/main/hardware/fase3-2.PNG" width="200" height="200" alt="IMG2">
+<img src="https://github.com/tiagoalvescordeiro/hermes-reply-iot-failures/blob/main/hardware/fase3-2.PNG" width="200" height="200" alt="IMG3">
+
 ## ✨ Principais Funcionalidades
 
 - **Dashboard Interativo:** Visualização em tempo real dos dados dos sensores de múltiplas máquinas com status, alertas e gráficos de tendência.
@@ -52,6 +59,12 @@ A solução proposta é um **sistema inteligente de monitoramento preditivo** qu
 | **Backend** | `Python`, `Flask`, `Pandas`, `Scikit-learn`                                                |
 | **Banco de Dados** | `Supabase` (PostgreSQL)                                                                                     |
 | **Simulação** | `Wokwi` para simulação de hardware (ESP32)                                                               |
+
+## 🛠️ Lista de sensores
+
+- ESP32 DevKitC-V4: O microcontrolador principal usado para a simulação de hardware.
+- Sensor de Temperatura e Umidade DHT22: Coleta dados de temperatura e umidade.
+- Fotorresistores (LDR): São utilizados três fotorresistores (ldr1, ldr2, ldr3) para simular a detecção de luminosidade.
 
 ## 🧠 Arquitetura da Solução
 
