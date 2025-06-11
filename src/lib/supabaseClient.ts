@@ -86,6 +86,10 @@ export interface EquipmentData {
     humidity: number;
   };
   lastReading: string;
+  prediction?: {
+    falha_prevista: boolean;
+    probabilidade_falha: number;
+  };  
 }
 
 export interface Alert {

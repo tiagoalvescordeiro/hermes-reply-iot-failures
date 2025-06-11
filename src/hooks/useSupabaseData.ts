@@ -109,6 +109,33 @@ const generateAlerts = (equipmentData: EquipmentData[]): Alert[] => {
 
   return alerts;
 };
+// Função para chamar API de predição
+const fetchPrediction = async (leitura: LeituraSensor) => {
+  try {
+    const response = await fetch('http://127.0.0.1:5000/predict', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        temperatura: leitura.temperatura,
+        vibracao_x: leitura.vibracao_x,
+        vibracao_y: leitura.vibracao_y,
+        vibracao_z: leitura.vibracao_z,
+        umidade: leitura.umidade,
+      }),
+    });
+
+    if (!response.ok) {
+      console.error(`Erro na predição: ${response.statusText}`);
+      return undefined;
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Falha ao conectar com a API de predição:", error);
+    return undefined;
+  }
+};
 
 export const useSupabaseData = () => {
   const [alerts, setAlerts] = useState<Alert[]>([]);
@@ -188,7 +215,7 @@ export const useSupabaseData = () => {
           leitura.vibracao_y,
           leitura.vibracao_z
         );
-
+        const predictionResult = await fetchPrediction(leitura!);
         const rpm = calculateRPM(vibration);
         const status = getEquipmentStatus(leitura.temperatura, vibration);
 
@@ -206,14 +233,16 @@ export const useSupabaseData = () => {
             humidity: leitura.umidade,
           },
           lastReading: leitura.timestamp_leitura,
+          prediction: predictionResult,
         };
       });
+      
 
       const results = await Promise.all(equipmentPromises);
       console.log(`🎉 Processamento concluído: ${results.length} equipamentos`);
       return results;
     },
-    refetchInterval: 3000, // Atualizar a cada 3 segundos
+    refetchInterval: 5000, // Atualizar a cada 5 segundos
   });
 
   // Atualizar alertas sempre que os dados dos equipamentos mudarem
