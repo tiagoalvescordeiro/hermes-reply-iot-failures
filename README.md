@@ -62,14 +62,6 @@ O sistema possui a seguinte arquitetura de dados:
 3.  **Banco de Dados (Supabase)**: Um banco de dados PostgreSQL gerenciado pelo Supabase armazena os dados das máquinas e as leituras históricas dos sensores.
 4.  **Frontend (React)**: Um dashboard construído em React com a biblioteca de componentes `shadcn/ui` busca os dados do Supabase em tempo real e os exibe em uma interface intuitiva, com cartões de status, alertas e gráficos.
 
-```
-graph TD
-    A[Simulador de Sensores] -- Dados JSON via HTTP --> B[API Flask (Python)];
-    B -- Armazena Leituras --> C[Banco de Dados Supabase];
-    D[Dashboard React] -- Busca Dados --> C;
-    B -- /predict --> E[Modelo de ML];
-```
-
 ## 🚀 Como Executar o Projeto
 
 Siga os passos abaixo para configurar e executar o projeto em seu ambiente local.
